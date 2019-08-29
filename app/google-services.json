@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "130583732115",
+    "firebase_url": "https://kkhdb-e118b.firebaseio.com",
+    "project_id": "kkhdb-e118b",
+    "storage_bucket": "kkhdb-e118b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130583732115:android:568e0f5d14e3a837",
+        "android_client_info": {
+          "package_name": "com.kkh.kronikare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130583732115-ege9l3s7nf7b6gas7mk64pooi6141a2e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kkh.kronikare",
+            "certificate_hash": "5227106fe806b144a6a63db131bc07d66e418a58"
+          }
+        },
+        {
+          "client_id": "130583732115-rl69v7lmhudqmj2volhdia2v6t6uvbol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQusz3AcWUjKqHvC_2J5oKOTIggu2_0W4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130583732115-rl69v7lmhudqmj2volhdia2v6t6uvbol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

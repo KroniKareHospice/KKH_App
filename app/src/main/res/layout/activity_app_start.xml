@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/kkh_img1"
+    android:screenOrientation="portrait"
+    tools:context=".AppStart">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/register"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="33dp" />
+
+    <Button
+        android:id="@+id/register"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/log_in"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="151dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/roundedbutton"
+        android:fadingEdge="horizontal|vertical"
+        android:soundEffectsEnabled="true"
+        android:text="JOIN US"
+        tools:fadingEdgeLength="@tools:sample/cities"
+        tools:textColor="@android:color/holo_blue_dark" />
+
+    <Button
+        android:id="@+id/log_in"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="149dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/roundedbutton"
+        android:fadingEdge="horizontal|vertical"
+        android:soundEffectsEnabled="true"
+        android:text="LOG IN"
+        tools:fadingEdgeLength="@tools:sample/cities"
+        tools:textColor="@android:color/holo_blue_dark" />
+
+    <LinearLayout
+        android:id="@+id/dots"
+        android:layout_width="58dp"
+        android:layout_height="29dp"
+        android:layout_alignEnd="@+id/viewPager"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="173dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginEnd="153dp"
+        android:layout_marginBottom="127dp"
+        android:orientation="horizontal"></LinearLayout>
+
+</RelativeLayout>
