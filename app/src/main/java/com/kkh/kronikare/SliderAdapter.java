@@ -17,9 +17,13 @@ public class SliderAdapter extends PagerAdapter {
 
     //Arrays
     public int[] slide_images = {
-            R.drawable.kkh_img2,
-            R.drawable.kkh_img3,
-            R.drawable.kkh_img4
+            R.drawable.appstart1,
+            R.drawable.appstart2,
+            R.drawable.appstart3,
+            R.drawable.appstart4,
+            R.drawable.appstart5,
+            R.drawable.appstart6,
+            R.drawable.appstart7
     };
 
     public SliderAdapter(Context context) {

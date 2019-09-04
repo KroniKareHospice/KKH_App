@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.util.DisplayMetrics;
 
 public class AppStart extends AppCompatActivity {
 
@@ -54,7 +55,7 @@ public class AppStart extends AppCompatActivity {
     }
 
     public void addDotsIndicator(int position) {
-        mDots = new TextView[3];
+        mDots = new TextView[7];
         mDotLayout.removeAllViews();
         for(int i=0;i<mDots.length;i++)
         {

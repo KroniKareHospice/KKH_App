@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.google.firebase.auth.FirebaseUser;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -21,9 +21,11 @@ public class Register extends AppCompatActivity {
 
     EditText email,name,phone,pwd;
     Button signUp;
+    static int attempt=0;
 //    ProgressBar progressBar;
     FirebaseAuth mAuth;
     FirebaseDatabase db;
+    private FirebaseUser firebaseUser;
     DatabaseReference dbref;
     String uname,uemail,uphone,upwd;
     @Override
@@ -48,6 +50,7 @@ public class Register extends AppCompatActivity {
         });
 
     }
+
 
 
     protected  void registerUser()
@@ -92,37 +95,27 @@ public class Register extends AppCompatActivity {
                         User user = new User(uname,uphone);
 
                         String id=dbref.push().getKey();
-                        Toast.makeText(Register.this, id, Toast.LENGTH_SHORT).show();
-                        dbref.child(id).setValue(user);/*.addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                if (task.isSuccessful()) {
-                                    Toast.makeText(Register.this, "User added!!", Toast.LENGTH_SHORT).show();
-                                } else
-                                {
-                                    Toast.makeText(Register.this, "User not added!!", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });*/
-                        /*FirebaseDatabase.getInstance().getReference("User")
-                                .child(FirebaseDatabase.getInstance().getReference("User").push().getKey())
-                                .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                //progressBar.setVisibility(View.GONE);
-                                if (task.isSuccessful()) {
-                                    Toast.makeText(Register.this, "Registration Successful!!", Toast.LENGTH_SHORT).show();
-                                } else
-                                {
-                                    Toast.makeText(Register.this, "Registration Unsuccessful!!", Toast.LENGTH_SHORT).show();
-                                }
-
-                            }
-                        });*/
+                        Toast.makeText(Register.this, id+"   "+(++attempt), Toast.LENGTH_SHORT).show();
+                        dbref.child(id).setValue(user);
+                        firebaseUser=mAuth.getCurrentUser();
+                        firebaseUser.sendEmailVerification()
+                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if(task.isSuccessful())
+                                        {
+                                            Toast.makeText(Register.this,"Email Sent For Verification!! Please Verify",Toast.LENGTH_SHORT).show();
+                                        }
+                                        else
+                                        {
+                                            Toast.makeText(Register.this,"Could Not Send Email!!",Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
                     }
                     else
                     {
-                        Toast.makeText(Register.this,"Registration Unsuccessful!!",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Register.this,"Registration Unsuccessful!!"+"   "+(++attempt),Toast.LENGTH_SHORT).show();
                     }
                 }
             });
