@@ -11,5 +11,5 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
-        app:srcCompat="@drawable/kkh_img2" />
+        app:srcCompat="@drawable/appstart1" />
 </RelativeLayout>
