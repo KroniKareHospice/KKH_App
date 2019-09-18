@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">KroniKare</string>
+    <string name="title_activity_need">NeedActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string-array name="relation_array">
+        <item>Father</item>
+        <item>Mother</item>
+        <item>Self</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="city_array">
+        <item>Pune</item>
+        <item>Mumbai</item>
+        <item>Delhi</item>
+        <item>Banglore</item>
+    </string-array>
 </resources>
+
