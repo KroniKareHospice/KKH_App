@@ -1,5 +1,8 @@
 package com.kkh.kronikare;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Service {
 
     private static Service service;
@@ -9,10 +12,10 @@ public class Service {
     private String startDate;
     private String durationInMonths;
     private String caretakerGender;
-    private String[] languages;
+    private List<String> languages;
 
     private Service() {
-
+        languages=new ArrayList<>();
     }
 
     public static synchronized Service getService()
@@ -48,7 +51,7 @@ public class Service {
         return caretakerGender;
     }
 
-    public String[] getLanguages() {
+    public List<String> getLanguages() {
         return languages;
     }
 
@@ -76,7 +79,7 @@ public class Service {
         this.caretakerGender = caretakerGender;
     }
 
-    public void setLanguages(String[] languages) {
+    public void setLanguages(List<String> languages) {
         this.languages = languages;
     }
 }
