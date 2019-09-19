@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8BC34A"
+    tools:context=".CaregiverDetailActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroupGender"
+        android:layout_width="330dp"
+        android:layout_height="125dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="101dp"
+        android:layout_marginEnd="30dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonAny"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/radioButtonMale"
+            android:layout_alignBottom="@id/radioButtonMale"
+            android:layout_weight="1"
+            android:text="Any Gender"
+            android:textColor="#ffffff" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Male"
+            android:textColor="#ffffff" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFemale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/radioButtonAny"
+            android:layout_weight="1"
+            android:text="Female"
+            android:textColor="#ffffff" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupLive"
+        android:layout_width="wrap_content"
+        android:layout_height="92dp"
+        android:layout_below="@+id/radioGroupGender"
+        android:layout_alignStart="@+id/radioGroupGender"
+        android:layout_alignEnd="@+id/radioGroupGender"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="0dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonLiveIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/radioGroupLive"
+            android:layout_alignBottom="@+id/radioGroupLive"
+            android:layout_weight="1"
+            android:text="Live-In"
+            android:textColor="#ffffff" />
+
+        <RadioButton
+            android:id="@+id/radioButtonLiveOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/radioGroupLive"
+            android:layout_alignTop="@+id/radioGroupLive"
+            android:layout_weight="1"
+            android:text="Live-Out"
+            android:textColor="#ffffff" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/langInput"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroupLive"
+        android:layout_alignStart="@+id/radioGroupLive"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:hint="Enter a language"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#C7C2C2" />
+
+    <ImageButton
+        android:id="@+id/langAdd"
+        android:layout_width="45dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/langInput"
+        android:layout_alignEnd="@+id/radioGroupLive"
+        android:layout_alignBottom="@+id/langInput"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/roundedbutton"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <TextView
+        android:id="@+id/langDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="74dp"
+        android:layout_below="@+id/langInput"
+        android:layout_alignStart="@+id/langInput"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_toStartOf="@+id/langAdd"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textViewReset"
+        android:layout_width="71dp"
+        android:layout_height="58dp"
+        android:layout_below="@+id/langInput"
+        android:layout_alignEnd="@+id/langAdd"
+        android:layout_alignBottom="@+id/langDisplay"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/langDisplay"
+        android:clickable="true"
+        android:linksClickable="true"
+        android:text="RESET"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#8C8597" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroupGender"
+        android:layout_alignStart="@+id/radioGroupGender"
+        android:layout_alignEnd="@+id/radioGroupGender"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="0dp"
+        android:text="Where should our Caregiver stay?"
+        android:textAlignment="gravity"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/radioGroupGender"
+        android:layout_alignEnd="@+id/radioGroupGender"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="0dp"
+        android:text="Our Caregiver should be:"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroupLive"
+        android:layout_alignStart="@+id/langInput"
+        android:layout_alignEnd="@+id/langAdd"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="0dp"
+        android:text="Our Caregiver should speak:"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/langDisplay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/roundedbutton"
+        android:text="NEXT" />
+
+</RelativeLayout>
